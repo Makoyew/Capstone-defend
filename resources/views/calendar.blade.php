@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+        <h2 class="text-xl font-semibold leading-tight text-gray-800">
             {{ __('Calendar of Events') }}
         </h2>
     </x-slot>
@@ -19,11 +19,8 @@
 <div class="modal fade" id="addEventModal" tabindex="-1" role="dialog" aria-labelledby="addEventModalLabel">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-            <div class="modal-header bg-primary text-white">
+            <div class="text-white modal-header bg-primary">
                 <h4 class="modal-title" id="addEventModalLabel">Add Event</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
             </div>
             <div class="modal-body">
                 <form id="addEventForm">
@@ -31,20 +28,22 @@
                         <label for="eventTitle">Event Title:</label>
                         <input type="text" class="form-control" id="eventTitle" name="title" required>
                     </div>
-                    <div class="form-group">
+                    <div class="mt-2 form-group">
                         <label for="eventColor">Event Color:</label>
                         <input type="text" class="form-control" id="eventColor" name="color" />
                     </div>
-                    <div class="form-group">
+                    <div class="mt-2 form-group">
                         <label for="eventStart">Event Start Date:</label>
                         <input type="text" class="form-control datepicker" id="eventStart" name="start" required>
                     </div>
-                    <div class="form-group">
+                    <div class="mt-2 form-group">
                         <label for="eventEnd">Event End Date:</label>
                         <input type="text" class="form-control datepicker" id="eventEnd" name="end" required>
                     </div>
                     {{ csrf_field() }}
-                    <button type="submit" class="btn btn-primary">Add Event</button>
+                    <div class="flex justify-end">
+                        <button type="submit" class="mt-2 btn btn-add">Add Event</button>
+                    </div>
                 </form>
             </div>
         </div>
@@ -211,6 +210,17 @@
 
     .card-body {
         padding: 20px;
+    }
+
+    .btn-add {
+        /* Style for Reject button */
+        background-color: #007bff;
+        color: white;
+    }
+
+    .btn-add:hover {
+        /* Hover effect for Reject button */
+        background-color: #106acb;
     }
 </style>
 

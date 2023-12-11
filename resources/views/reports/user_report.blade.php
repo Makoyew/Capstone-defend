@@ -19,8 +19,8 @@
 
     <div class="container p-4 mx-auto mb-8 bg-white rounded-lg shadow-lg">
         <h2 class="mb-4 text-2xl font-bold text-center">User Information</h2>
-        <div class="flex items-center mb-4">
-            <div class="max-w-md mx-auto text-center">
+        <div class="flex mb-4 items-left">
+            <div class="max-w-md mx-auto text-left">
                 <p class="mb-2 text-gray-700">Full Name: {{ $user->surname }}, {{ $user->middle_name }} {{ $user->first_name }}</p>
                 <p class="mb-2 text-gray-700">Email: {{ $user->email }}</p>
                 <p class="mb-2 text-gray-700">Address: {{ $user->residential_street }}, {{$user->residential_barangay}}, {{$user->residential_city}}, {{$user->residential_province}}</p>

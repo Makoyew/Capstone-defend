@@ -112,10 +112,10 @@
                     </div>
                     <div class="mt-1">
                         <input type="checkbox" name="reason" id="other" value="other" class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500">
-                        <label for="other" class="ml-2 text-sm text-gray-700">other</label>
+                        <label for="other" class="ml-2 text-sm text-gray-700">Others Please Specify</label>
                     </div>
                     <div class="mt-1" id="custom-reason-container" style="display: none;">
-                        <label for="custom_reason" class="block text-sm font-medium text-gray-700">Custom Reason:</label>
+                        <label for="custom_reason" class="block text-sm font-medium text-gray-700">Other type of sick:</label>
                         <input type="text" name="reason[]" id="custom_reason" class="block w-full mt-1 rounded-md shadow-sm form-input" />
                     </div>
                 </div>

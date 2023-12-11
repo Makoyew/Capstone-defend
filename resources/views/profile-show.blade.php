@@ -31,7 +31,7 @@
                     <!-- First Name -->
                     <div class="mb-4">
                         <label for="first_name" class="block text-sm font-medium text-gray-700">First Name:</label>
-                        <input type="text" id="first_name" name="first_name" value="{{ old('first_name', $user->first_name) }}" required
+                        <input type="text" id="first_name" name="first_name" value="{{ old('first_name', $user->first_name) }}"
                             class="input-field">
                     </div>
 
@@ -46,7 +46,7 @@
                     <!-- Gender -->
                     <div class="mb-4">
                         <label for="gender" class="block text-sm font-medium text-gray-700">Gender:</label>
-                        <select id="gender" name="gender" class="select-field" required>
+                        <select id="gender" name="gender" class="select-field" >
                             <option value="male" {{ old('gender', $user->gender) === 'male' ? 'selected' : '' }}>Male</option>
                             <option value="female" {{ old('gender', $user->gender) === 'female' ? 'selected' : '' }}>Female</option>
                             <option value="other" {{ old('gender', $user->gender) === 'other' ? 'selected' : '' }}>Other</option>
@@ -76,7 +76,7 @@
 
                     <div class="mb-4">
                         <label for="civil_status" class="block text-sm font-medium text-gray-700">Civil Status:</label>
-                        <select id="civil_status" name="civil_status" class="select-field" required>
+                        <select id="civil_status" name="civil_status" class="select-field" >
                             <option value="single" {{ old('civil_status', $user->civil_status) === 'single' ? 'selected' : '' }}>Single</option>
                             <option value="married" {{ old('civil_status', $user->civil_status) === 'married' ? 'selected' : '' }}>Married</option>
                             <option value="separated" {{ old('civil_status', $user->civil_status) === 'separated' ? 'selected' : '' }}>Separated</option>
@@ -101,7 +101,7 @@
                     <!-- Blood Type -->
                     <div class="mb-4">
                         <label for="blood_type" class="block text-sm font-medium text-gray-700">Blood Type:</label>
-                        <input type="text" id="blood_type" name="blood_type" value="{{ old('blood_type', $user->blood_type) }}" required
+                        <input type="text" id="blood_type" name="blood_type" value="{{ old('blood_type', $user->blood_type) }}"
                             class="input-field">
                     </div>
 

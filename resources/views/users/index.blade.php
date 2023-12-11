@@ -159,11 +159,66 @@
                         </tbody>
                     </table>
 
-                    <div class="mt-4">
-                        {{ $users->links() }}
+                    <div class="flex items-center justify-center mt-4">
+                        <nav>
+                            <ul class="pagination">
+                                {{ $users->links() }}
+                            </ul>
+                        </nav>
                     </div>
+
+                    <style>
+                        .pagination {
+                            display: flex;
+                            list-style: none;
+                        }
+
+                        .pagination li {
+                            margin: 0 1px;
+                        }
+
+                        .pagination a {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            min-width: 30px;
+                            min-height: 30px;
+                            text-decoration: none;
+                            color: #3490dc;
+                            background-color: #0d120f;
+                            border: 1px solid #c6d6e1;
+                            border-radius: 0.25rem;
+                            transition: background-color 0.3s;
+                        }
+
+                        .pagination a:hover {
+                            background-color: #4299e1 !important;
+                            color: #fff !important;
+                        }
+
+                        .pagination .active a {
+                            background-color: #4299e1 !important;
+                            color: #fff !important;
+                        }
+
+                        .pagination .active span {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            min-width: 30px;
+                            min-height: 30px;
+                            background-color: #4299e1;
+                            color: #fff;
+                            border: 1px solid #4299e1;
+                            border-radius: 0.25rem;
+                        }
+                    </style>
+
+
+
                 </div>
         </div>
+
 
 
         <!-- Create User Modal -->

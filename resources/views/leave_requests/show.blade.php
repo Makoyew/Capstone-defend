@@ -42,7 +42,7 @@
                             @endif
                         </div>
                         <div>
-                            <label class="block mb-1 font-semibold text-gray-600">Other {{ $leaveRequest->leave_type }} type:</label>
+                            <label class="block mb-1 font-semibold text-gray-600">Specific {{ $leaveRequest->leave_type }} type:</label>
 
                             @if ($leaveRequest->leave_type === 'sick' )
                                 <input type="text" value="{{ $leaveRequest->reason }}" readonly class="w-full px-3 py-2 bg-gray-100 rounded-md" />

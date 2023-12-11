@@ -232,25 +232,28 @@
 
 
                                 @foreach ($user->children as $child)
-                                <div class="modal-container" id="deleteChildModal{{ $child->id }}">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="deleteChildModalLabel{{ $child->id }}">Confirm Deletion</h5>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p>Are you sure you want to delete this child?</p>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="modal-button cancel" data-bs-dismiss="modal">Cancel</button>
-                                            <form method="POST" action="{{ route('additional_fields.destroy', ['id' => $child->id]) }}">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" class="modal-button delete">Delete</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                                @endforeach
+<div class="modal" id="deleteChildModal{{ $child->id }}" tabindex="-1" role="dialog">
+    <div class="mx-auto mt-5 modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteChildModalLabel{{ $child->id }}">Confirm Deletion</h5>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete this child?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="modal-button cancel" data-bs-dismiss="modal">Cancel</button>
+                <form method="POST" action="{{ route('additional_fields.destroy', ['id' => $child->id]) }}">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="modal-button delete">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@endforeach
+
 
 
                                 <div id="childForm" style="display: none;">

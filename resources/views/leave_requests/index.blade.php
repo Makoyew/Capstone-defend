@@ -156,8 +156,12 @@
                                 @endforeach
                             </tbody>
                         </table>
-                        <div class="mt-4">
-                            {{ $leaveRequests->links() }}
+                        <div class="flex items-center justify-center mt-4">
+                            <nav>
+                                <ul class="pagination">
+                                   {{ $leaveRequests->links() }}
+                                </ul>
+                            </nav>
                         </div>
                     </div>
                 </div>

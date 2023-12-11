@@ -35,11 +35,11 @@
                                     <label for="middle_name" class="form-label">Middle Name:</label>
                                     <input type="text" id="middle_name" name="middle_name" value="{{ old('middle_name', $user->middle_name) }}" required class="form-input">
                                 </div>
-                                <!-- Email -->
+                                {{-- <!-- Email -->
                                 <div>
                                     <label for="email" class="form-label">Email Address:</label>
                                     <input type="email" id="email" name="email" value="{{ old('email', $user->email) }}" class="form-input">
-                                </div>
+                                </div> --}}
                                 <!-- Role -->
                                 <div>
                                     <label for="role" class="form-label">Role:</label>

@@ -200,7 +200,7 @@ class RegisteredUserController extends Controller
             'surname' => ['nullable', 'string', 'max:255'],
             'first_name' => ['nullable', 'string', 'max:255'],
             'middle_name' => ['nullable', 'string', 'max:255'],
-            'email' => ['nullable', 'string', 'email', 'max:255', 'unique:users,email,' . $user->id],
+            // 'email' => ['nullable', 'string', 'email', 'max:255', 'unique:users,email,' . $user->id],
             'role' => 'nullable|string|in:admin,employee,supervisor',
             'gender' => 'nullable|in:male,female,other',
             'date_of_birth' => 'nullable|date',
